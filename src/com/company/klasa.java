@@ -64,7 +64,7 @@ public abstract class klasa {
         return zwyklyAtak()+10;
     }
 
-    double Pyroblast() { return 30+zwyklyAtakMagii(); }
+    double Pyroblast() { return 30+3*this.intelligence; }
 
     double IceBlock() {return 0;}
 
@@ -72,13 +72,13 @@ public abstract class klasa {
     double getStr(){ return this.Str;}
     double getIntelligence() { return this.intelligence;}
 
+    int getLicznikSkill1(){ return this.skill1;}
+    int getLicznikSkill2(){ return this.skill2;}
+
     void setLicznikSkill1(int licznik){ this.skill1 = licznik; }
     void setLicznikSkill2(int licznik){
         this.skill2 = licznik;
     }
-
-    int getLicznikSkill1(){ return this.skill1;}
-    int getLicznikSkill2(){ return this.skill2;}
 
     void minusHp(double ileHp){
         this.Hp -= ileHp;

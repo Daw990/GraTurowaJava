@@ -53,15 +53,16 @@ public class wprowadz extends klasa {
 
     public void opisSkillsCzarodziej(){
         System.out.println("1. Zwykły atak");
-        System.out.println("2. Pyroblast '2 razy na turę' OBRAŻENIA: 30 + 2*inteligencja. Dodatkowo podpala przeciwnika i " +
-                "zadaje mu 0.8*inteligencja przez 2 kolejne tury");
-        System.out.println("2. IceBlock 'raz na turę'");
+        System.out.println("2. Pyroblast 'raz na turę' OBRAŻENIA: 30 + 3*inteligencja. Dodatkowo podpala przeciwnika i " +
+                "zadaje mu 2*inteligencja przez 2 kolejne tury");
+        System.out.println("3. IceBlock 'raz na turę' Zamieniasz sie w bryłę lodu, po ataku przeciwnika oddajesz mu " +
+                "równowartość obrażeń!");
 
         while(true) {
             try{
                 wyborAtaku = scan.nextInt();
 
-                if(wyborAtaku==1 || wyborAtaku==2)
+                if(wyborAtaku==1 || wyborAtaku==2 || wyborAtaku==3)
                     break;
                 else System.out.println("Podaj poprawną wartość!");
             }

@@ -31,12 +31,23 @@ public class Main {
 
                 while (Szkielet1.getHp() >= 0) {
 
+                    if (Szkielet1.getHp() <= 0) {
+                        ((Szkielet) Szkielet1).szkiletDie();
+                        break;
+                    }
+
+                    if (Czarodziej1.getHp() <= 0) {
+                        Czarodziej1.rip();
+                        break;
+                    }
+
                     wprowadz1.opisSkillsCzarodziej();
 
                     if (((Czarodziej) Czarodziej1).licznikPodpalenia == 1 || ((Czarodziej) Czarodziej1).licznikPodpalenia ==2) {                                    //ile tur ma sie palic
-                        Goblin1.minusHp(0.8*Czarodziej1.getIntelligence());
-                        System.out.println("Przeciwnik płonie -"+ 0.8*Czarodziej1.getIntelligence()+"Hp");
-                        if(((Czarodziej) Czarodziej1).licznikPodpalenia==2){
+                        Goblin1.minusHp(2*Czarodziej1.getIntelligence());
+                        System.out.println("Przeciwnik płonie -"+ 2*Czarodziej1.getIntelligence()+"Hp");
+                        ((Czarodziej) Czarodziej1).licznikPodpalenia ++;
+                        if(((Czarodziej) Czarodziej1).licznikPodpalenia==3){
                             ((Czarodziej) Czarodziej1).licznikPodpalenia=0;
                         }
                     }
@@ -52,8 +63,13 @@ public class Main {
                         System.out.println("Hp Szkieleta: " + Szkielet1.getHp());
                         System.out.println("Szkielet oddaje ciach!");
                         Czarodziej1.minusHp(Szkielet1.zwyklyAtak());
-                        Czarodziej1.ileHp();
 
+                        if (Czarodziej1.getHp() <= 0) {
+                            Czarodziej1.rip();
+                            break;
+                        }
+
+                        Czarodziej1.ileHp();
                         }
                     while(wprowadz1.getWyborAtaku() == 2) {
 
@@ -64,18 +80,27 @@ public class Main {
                         }else if(Czarodziej1.getLicznikSkill1()!=1) {
 
                             Szkielet1.minusHp(Czarodziej1.Pyroblast());
+
+                            if (Szkielet1.getHp() <= 0) {
+                                ((Szkielet) Szkielet1).szkiletDie();
+                                break;
+                            }
+
                             System.out.println("Hp Szkieleta: " + Szkielet1.getHp());
                             System.out.println("Szkielet oddaje ciach!");
                             Czarodziej1.minusHp(Szkielet1.zwyklyAtak());
+
+                            if (Czarodziej1.getHp() <= 0) {
+                                Czarodziej1.rip();
+                                break;
+                            }
+
                             Czarodziej1.ileHp();
                             Czarodziej1.setLicznikSkill1(1);
                             ((Czarodziej) Czarodziej1).licznikPodpalenia = 1;
                             break;
 
-                        }else if (Szkielet1.getHp() <= 0) {
-                            ((Szkielet) Szkielet1).szkiletDie();
-                            break;
-                            }
+                        }
                         }
                     while(wprowadz1.getWyborAtaku() == 3) {
 
@@ -84,16 +109,21 @@ public class Main {
                             break;
 
                         }else if(Czarodziej1.getLicznikSkill2()!= 1) {
-                            Szkielet1.minusHp(Czarodziej1.IceBlock());
+
+                            if (Szkielet1.getHp() <= 0) {
+                                ((Szkielet) Szkielet1).szkiletDie();
+                                break;
+                            }
+
+                            Szkielet1.minusHp(Szkielet1.zwyklyAtak());
+                            System.out.println("Szkielet odbija swoje obrażenia!");
+
                             System.out.println("Hp Szkieleta: " + Szkielet1.getHp());
-                            System.out.println("Szkielet jest ogłuszony! uderz jeszcze raz!");
+
                             Czarodziej1.ileHp();
                             Czarodziej1.setLicznikSkill2(1);
                             break;
 
-                        }else if (Szkielet1.getHp() <= 0) {
-                            ((Szkielet) Szkielet1).szkiletDie();
-                            break;
                         }
                     }
                 }
@@ -108,11 +138,17 @@ public class Main {
 
                     while (Goblin1.getHp() >= 0) {
 
+                        if (Goblin1.getHp() <= 0) {
+                            ((Goblin) Goblin1).GoblinDie();
+                            break;
+                        }
+
                         wprowadz1.opisSkillsCzarodziej();
 
                         if (((Czarodziej) Czarodziej1).licznikPodpalenia == 1 || ((Czarodziej) Czarodziej1).licznikPodpalenia == 2) {                                    //ile tur ma sie palic
                             Goblin1.minusHp(0.8 * Czarodziej1.getIntelligence());
                             System.out.println("Przeciwnik płonie -" + 0.8 * Czarodziej1.getIntelligence() + "Hp");
+                            ((Czarodziej) Czarodziej1).licznikPodpalenia++;
                             if (((Czarodziej) Czarodziej1).licznikPodpalenia == 2) {
                                 ((Czarodziej) Czarodziej1).licznikPodpalenia = 0;
                             }
@@ -140,17 +176,26 @@ public class Main {
                                 } else if (Czarodziej1.getLicznikSkill1() != 1) {
 
                                     Goblin1.minusHp(Czarodziej1.Pyroblast());
+
+                                    if (Goblin1.getHp() <= 0) {
+                                        ((Goblin) Goblin1).GoblinDie();
+                                        break;
+                                    }
+
                                     System.out.println("Hp Goblina: " + Goblin1.getHp());
                                     System.out.println("Goblin oddaje ciach!");
                                     Czarodziej1.minusHp(Goblin1.zwyklyAtak());
+
+                                    if (Czarodziej1.getHp() <= 0) {
+                                        Czarodziej1.rip();
+                                        break;
+                                    }
+
                                     Czarodziej1.ileHp();
                                     Czarodziej1.setLicznikSkill1(1);
                                     ((Czarodziej) Czarodziej1).licznikPodpalenia = 1;
                                     break;
 
-                                } else if (Goblin1.getHp() <= 0) {
-                                    ((Goblin) Goblin1).GoblinDie();
-                                    break;
                                 }
                             }
                             while (wprowadz1.getWyborAtaku() == 3) {
@@ -160,19 +205,29 @@ public class Main {
                                     break;
 
                                 } else if (Czarodziej1.getLicznikSkill2() != 1) {
-                                    Goblin1.minusHp(Czarodziej1.ShieldBash());
+                                    Goblin1.minusHp(Czarodziej1.IceBlock());
+
+                                    if (Goblin1.getHp() <= 0) {
+                                        ((Goblin) Goblin1).GoblinDie();
+                                        break;
+                                    }
+
+                                    Goblin1.minusHp(Goblin1.zwyklyAtak());
+                                    System.out.println("Goblin odbija swoje obrażenia!");
+
+                                    if (Goblin1.getHp() <= 0) {
+                                        ((Goblin) Goblin1).GoblinDie();
+                                        break;
+                                    }
+
                                     System.out.println("Hp Goblina: " + Goblin1.getHp());
-                                    System.out.println("Goblin jest ogłuszony! uderz jeszcze raz!");
+
                                     Czarodziej1.ileHp();
                                     Czarodziej1.setLicznikSkill2(1);
                                     break;
 
-                                } else if (Goblin1.getHp() <= 0) {
-                                    ((Goblin) Goblin1).GoblinDie();
-                                    break;
                                 }
                             }
-
                         }
 
                         Czarodziej1.setLicznikSkill1(0);
@@ -191,6 +246,7 @@ public class Main {
                             if (((Czarodziej) Czarodziej1).licznikPodpalenia == 1 || ((Czarodziej) Czarodziej1).licznikPodpalenia ==2) {                                    //ile tur ma sie palic
                                 Goblin1.minusHp(0.8*Czarodziej1.getIntelligence());
                                 System.out.println("Przeciwnik płonie -"+ 0.8*Czarodziej1.getIntelligence()+"Hp");
+                                ((Czarodziej) Czarodziej1).licznikPodpalenia++;
                                 if(((Czarodziej) Czarodziej1).licznikPodpalenia==2){
                                     ((Czarodziej) Czarodziej1).licznikPodpalenia=0;
                                 }
@@ -319,8 +375,12 @@ public class Main {
                                         ((Smok) Smok1).SmokDie();
                                         break;
                                     }
+
+                                    if (Goblin1.getHp() <= 0) {
+                                        ((Goblin) Goblin1).GoblinDie();
+                                        break;
+                                    }
                                     System.out.println("Hp Smoka: " + Smok1.getHp());
-                                    System.out.println("Smok jest ogłuszony! uderz jeszcze raz!");
                                     Czarodziej1.ileHp();
 
                                     if (licznikTur == 2) {
