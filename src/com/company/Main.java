@@ -6,19 +6,14 @@ public class Main {
 
         wprowadz wprowadz1 = new wprowadz();
         klasa Czarodziej1 = new Czarodziej(600,4, 15,0,0);
-        klasa Wojownik1 = new Wojownik(600,15,4,0,0);
-        klasa Szkielet1 = new Szkielet(300, 5,1);
-        klasa Goblin1 = new Goblin(350, 9, 2);
-        klasa Smok1 = new Smok(600, 28, 8,0,0);
+        klasa Wojownik1 = new Wojownik(5,15,4,0,0);
+        klasa Szkielet1 = new Szkielet(150, 5,1);
+        klasa Goblin1 = new Goblin(10, 9, 2);
+        klasa Smok1 = new Smok(10, 28, 8,0,0);
 
         wprowadz1.opis();
 
         while(Czarodziej1.getHp()>=0 || Wojownik1.getHp()>=0) {
-
-            if(Czarodziej1.getHp()<=0) {
-                Czarodziej1.rip();
-                break;
-            }
 
             if (wprowadz1.getWyborPostaci() == 1) {
                 Czarodziej1.opis();
@@ -27,6 +22,12 @@ public class Main {
                 ((Szkielet) Szkielet1).pierwszeStarcie();
 
                 Czarodziej1.minusHp(15);
+
+                if (Czarodziej1.getHp() <= 0) {
+                    Czarodziej1.rip();
+                    break;
+                }
+
                 Czarodziej1.ileHp();
 
                 while (Szkielet1.getHp() >= 0) {
@@ -52,13 +53,8 @@ public class Main {
                         }
                     }
 
-                    if (wprowadz1.getWyborAtaku() == 1) {
+                    if (wprowadz1.getWyborAtaku() == 1 || Czarodziej1.getHp() >=0 || Szkielet1.getHp()>=0) {
                         Szkielet1.minusHp(Czarodziej1.zwyklyAtakMagii());
-
-                        if (Szkielet1.getHp() <= 0) {
-                            ((Szkielet) Szkielet1).szkiletDie();
-                            break;
-                        }
 
                         System.out.println("Hp Szkieleta: " + Szkielet1.getHp());
                         System.out.println("Szkielet oddaje ciach!");
@@ -71,7 +67,7 @@ public class Main {
 
                         Czarodziej1.ileHp();
                         }
-                    while(wprowadz1.getWyborAtaku() == 2) {
+                    while(wprowadz1.getWyborAtaku() == 2 || Czarodziej1.getHp() >=0 || Szkielet1.getHp()>=0) {
 
                         if(Czarodziej1.getLicznikSkill1() == 1) {
                             System.out.println("Zużyłeś moc specjalną spróbuj czegos innego");
@@ -102,7 +98,12 @@ public class Main {
 
                         }
                         }
-                    while(wprowadz1.getWyborAtaku() == 3) {
+                    while(wprowadz1.getWyborAtaku() == 3 || Czarodziej1.getHp() >=0 || Szkielet1.getHp()>=0) {
+
+                        if (Czarodziej1.getHp() <= 0) {
+                            Czarodziej1.rip();
+                            break;
+                        }
 
                         if(Czarodziej1.getLicznikSkill2() == 1) {
                             System.out.println("Zużyłeś moc specjalną spróbuj czegos innego");
@@ -129,6 +130,7 @@ public class Main {
                 }
                     Czarodziej1.setLicznikSkill1(0);
                     Czarodziej1.setLicznikSkill2(0);
+                    ((Czarodziej) Czarodziej1).licznikPodpalenia=0;
 
                     System.out.println("LVL UP - twoje atrybuty zwiększają się!");
                     Czarodziej1.lvlup(1, 5);
@@ -137,11 +139,6 @@ public class Main {
                     ((Goblin) Goblin1).pierwszeStarcie();
 
                     while (Goblin1.getHp() >= 0) {
-
-                        if (Goblin1.getHp() <= 0) {
-                            ((Goblin) Goblin1).GoblinDie();
-                            break;
-                        }
 
                         wprowadz1.opisSkillsCzarodziej();
 
@@ -168,6 +165,11 @@ public class Main {
 
                             }
                             while (wprowadz1.getWyborAtaku() == 2) {
+
+                                if (Czarodziej1.getHp() <= 0) {
+                                    Czarodziej1.rip();
+                                    break;
+                                }
 
                                 if (Czarodziej1.getLicznikSkill1() == 1) {
                                     System.out.println("Zużyłeś moc specjalną spróbuj czegos innego");
@@ -250,11 +252,6 @@ public class Main {
                                 if(((Czarodziej) Czarodziej1).licznikPodpalenia==2){
                                     ((Czarodziej) Czarodziej1).licznikPodpalenia=0;
                                 }
-                            }
-
-                            if (Smok1.getHp() <= 0) {
-                                ((Smok) Smok1).SmokDie();
-                                break;
                             }
 
                             if (Czarodziej1.getHp() <= 0) {
@@ -396,13 +393,20 @@ public class Main {
 
                         }
                     }
+
+                                                                        // wojownik
             }else if(wprowadz1.getWyborPostaci() == 2){
-                    Wojownik1.opis();
-                    Wojownik1.atrybuty();
 
-                    ((Szkielet) Szkielet1).pierwszeStarcie();
+                Wojownik1.opis();
+                Wojownik1.atrybuty();
 
-                    Wojownik1.minusHp(15);
+                ((Szkielet) Szkielet1).pierwszeStarcie();
+                Wojownik1.minusHp(15);
+
+                if(Wojownik1.getHp()<=0) {
+                    Wojownik1.rip();
+                    break;
+                }
                     Wojownik1.ileHp();
 
                     while (Szkielet1.getHp() >= 0) {
@@ -420,6 +424,12 @@ public class Main {
                             System.out.println("Hp Szkieleta: " + Szkielet1.getHp());
                             System.out.println("Szkielet oddaje ciach!");
                             Wojownik1.minusHp(Szkielet1.zwyklyAtak());
+
+                            if(Wojownik1.getHp()<=0) {
+                                Wojownik1.rip();
+                                break;
+                            }
+
                             Wojownik1.ileHp();
 
                         }
@@ -432,16 +442,23 @@ public class Main {
                             }else if(Wojownik1.getLicznikSkill1()!=1){
 
                                 Szkielet1.minusHp(Wojownik1.Whirlwind());
+
+                                if (Szkielet1.getHp() <= 0) {
+                                    ((Szkielet) Szkielet1).szkiletDie();
+                                    break;
+                                }
                                 System.out.println("Hp Szkieleta: " + Szkielet1.getHp());
                                 System.out.println("Szkielet oddaje ciach!");
                                 Wojownik1.minusHp(Szkielet1.zwyklyAtak());
+
+                                if(Wojownik1.getHp()<=0) {
+                                    Wojownik1.rip();
+                                    break;
+                                }
                                 Wojownik1.ileHp();
                                 Wojownik1.setLicznikSkill1(1);
                                 break;
 
-                            }else if (Szkielet1.getHp() <= 0) {
-                                ((Szkielet) Szkielet1).szkiletDie();
-                                break;
                             }
                         }
                         while(wprowadz1.getWyborAtaku() == 3) {
@@ -452,14 +469,15 @@ public class Main {
 
                             }else if(Wojownik1.getLicznikSkill2()!= 1) {
                                 Szkielet1.minusHp(Wojownik1.ShieldBash());
+
+                                if (Szkielet1.getHp() <= 0) {
+                                    ((Szkielet) Szkielet1).szkiletDie();
+                                    break;
+                                }
                                 System.out.println("Hp Szkieleta: " + Szkielet1.getHp());
                                 System.out.println("Szkielet jest ogłuszony! uderz jeszcze raz!");
                                 Wojownik1.ileHp();
                                 Wojownik1.setLicznikSkill2(1);
-                                break;
-
-                            }else if (Szkielet1.getHp() <= 0) {
-                                ((Szkielet) Szkielet1).szkiletDie();
                                 break;
                             }
                         }
@@ -473,7 +491,7 @@ public class Main {
 
                     ((Goblin) Goblin1).pierwszeStarcie();
 
-                    while (Goblin1.getHp() >= 0) {
+                    while (Goblin1.getHp() >= 0 || Wojownik1.getHp()>=0) {
 
                         wprowadz1.opisSkillsWojownik();
 
@@ -490,6 +508,11 @@ public class Main {
                             Wojownik1.minusHp(Goblin1.zwyklyAtak());
                             Wojownik1.ileHp();
 
+                            if(Wojownik1.getHp()<=0){
+                                Wojownik1.rip();
+                                break;
+                            }
+
                         }
                         while(wprowadz1.getWyborAtaku() == 2) {
 
@@ -500,15 +523,22 @@ public class Main {
                             }else if(Wojownik1.getLicznikSkill1()!=1){
 
                                 Goblin1.minusHp(Wojownik1.Whirlwind());
+
+                                if (Goblin1.getHp() <= 0) {
+                                    ((Goblin) Goblin1).GoblinDie();
+                                    break;
+                                }
+
                                 System.out.println("Hp Goblina: " + Goblin1.getHp());
                                 System.out.println("Goblin oddaje ciach!");
                                 Wojownik1.minusHp(Goblin1.zwyklyAtak());
+
+                                if(Wojownik1.getHp()<=0){
+                                    Wojownik1.rip();
+                                    break;
+                                }
                                 Wojownik1.ileHp();
                                 Wojownik1.setLicznikSkill1(1);
-                                break;
-
-                            }else if (Goblin1.getHp() <= 0) {
-                                ((Goblin) Goblin1).GoblinDie();
                                 break;
                             }
                         }
@@ -520,18 +550,17 @@ public class Main {
 
                             }else if(Wojownik1.getLicznikSkill2()!= 1) {
                                 Goblin1.minusHp(Wojownik1.ShieldBash());
+
+                                if (Goblin1.getHp() <= 0) {
+                                    ((Goblin) Goblin1).GoblinDie();
+                                    break;
+                                }
+
                                 System.out.println("Hp Goblina: " + Goblin1.getHp());
                                 System.out.println("Goblin jest ogłuszony! uderz jeszcze raz!");
-                                Wojownik1.ileHp();
                                 Wojownik1.setLicznikSkill2(1);
-                                break;
-
-                            }else if (Goblin1.getHp() <= 0) {
-                                ((Goblin) Goblin1).GoblinDie();
-                                break;
                             }
                         }
-
                     }
 
                     Wojownik1.setLicznikSkill1(0);
@@ -544,12 +573,7 @@ public class Main {
                     int n=0, e=0;                                            //licznik do wihrlwinda i shield basha co 3 tury
                     int licznikTur = 0;               //licznik do ultimate bosa
 
-                    while(Smok1.getHp()>=0) {
-
-                        if (Smok1.getHp() <= 0) {
-                            ((Smok) Smok1).SmokDie();
-                            break;
-                        }
+                while(Smok1.getHp()>=0 || Wojownik1.getHp()>=0);{
 
                         if(Wojownik1.getHp()<=0) {
                             Wojownik1.rip();
@@ -620,11 +644,13 @@ public class Main {
                             }else if(Wojownik1.getLicznikSkill1()!=1){
 
                                 Smok1.minusHp(Wojownik1.Whirlwind());
-                                System.out.println("Hp Smoka: " + Smok1.getHp());
 
                                 if (Smok1.getHp() <= 0) {
+                                    ((Smok) Smok1).SmokDie();
                                     break;
                                 }
+
+                                System.out.println("Hp Smoka: " + Smok1.getHp());
 
                                 if(licznikTur != 2) {
 
@@ -632,6 +658,7 @@ public class Main {
                                     Wojownik1.minusHp(Smok1.losowanieAtaku());
 
                                     if(Wojownik1.getHp()<=0) {
+                                        Wojownik1.rip();
                                         break;
                                     }
 
@@ -643,6 +670,7 @@ public class Main {
                                     Wojownik1.minusHp(((Smok)Smok1).UltiSmok(150));
 
                                     if(Wojownik1.getHp()<=0) {
+                                        Wojownik1.rip();
                                         break;
                                     }
                                     licznikTur = 0;
@@ -667,7 +695,6 @@ public class Main {
                                 }
                                 System.out.println("Hp Smoka: " + Smok1.getHp());
                                 System.out.println("Smok jest ogłuszony! uderz jeszcze raz!");
-                                Wojownik1.ileHp();
 
                                 if(licznikTur==2){
                                     licznikTur = 0;
@@ -675,13 +702,9 @@ public class Main {
 
                                 Wojownik1.setLicznikSkill2(1);
                                 break;
-
                             }
-
                         }
-
                     }
-
             }
             break;
         }

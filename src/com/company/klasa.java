@@ -1,5 +1,6 @@
 package com.company;
 import java.util.Random;
+
 public abstract class klasa {
 
     protected double Hp;
@@ -83,5 +84,6 @@ public abstract class klasa {
     void minusHp(double ileHp){
         this.Hp -= ileHp;
     }
+
 }
 
