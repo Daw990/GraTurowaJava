@@ -393,11 +393,11 @@ public class Main {
                                 }
                             }
                             if(Smok1.getHp()<=0 || Czarodziej1.getHp()<=0)
-                                break;
+                                break ;
                         }
                                                                         // wojownik
             }else if(wprowadz1.getWyborPostaci() == 2){
-
+ommit
                 Wojownik1.opis();
                 Wojownik1.atrybuty();
 
