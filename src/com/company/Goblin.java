@@ -19,3 +19,4 @@ public class Goblin extends klasa {
 
     }
 }
+//g

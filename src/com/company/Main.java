@@ -7,8 +7,8 @@ public class Main {
         wprowadz wprowadz1 = new wprowadz();
         klasa Czarodziej1 = new Czarodziej(600,4, 15,0,0);
         klasa Wojownik1 = new Wojownik(600,15,4,0,0);
-        klasa Szkielet1 = new Szkielet(10, 5,1);
-        klasa Goblin1 = new Goblin(10, 9, 2);
+        klasa Szkielet1 = new Szkielet(200, 5,1);
+        klasa Goblin1 = new Goblin(300, 9, 2);
         klasa Smok1 = new Smok(600, 28, 8,0,0);
 
         wprowadz1.opis();
@@ -397,7 +397,7 @@ public class Main {
                         }
                                                                         // wojownik
             }else if(wprowadz1.getWyborPostaci() == 2){
-ommit
+
                 Wojownik1.opis();
                 Wojownik1.atrybuty();
 
