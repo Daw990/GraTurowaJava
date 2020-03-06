@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06bc170d-a739-4f4f-8f5c-870e366ee5e1" name="Default Changelist" comment="Poprawiony cały Czarodziej">
-      <change afterPath="$PROJECT_DIR$/src/com/company/KontenerWalka.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/WalkaCzarodziej.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/GraTurowaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/WalkaWojownik.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game/com/company/Goblin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/com/company/Goblin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/com/company/KontenerWalka.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Game/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game/com/company/Smok.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/com/company/Smok.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game/com/company/wprowadz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/com/company/wprowadz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Goblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/com/company/WalkaCzarodziej.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/com/company/WalkaCzarodziej.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/KontenerWalka.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Smok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Smok.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/wprowadz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/wprowadz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/WalkaCzarodziej.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/WalkaCzarodziej.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,24 +21,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/KontenerWalka.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/WalkaCzarodziej.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/WalkaWojownik.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="394" column="4" selection-start-line="394" selection-start-column="4" selection-end-line="394" selection-end-column="4" />
+            <state relative-caret-position="-854">
+              <caret line="210" column="27" lean-forward="true" selection-start-line="210" selection-start-column="27" selection-end-line="210" selection-end-column="27" />
               <folding>
-                <element signature="method#pyroblastPodpalenie#0;class#WalkaCzarodziej#0" />
-                <element signature="method#walkaCzarodziejSzkielet#0;class#WalkaCzarodziej#0" />
-                <element signature="method#walkaCzarodziejGoblin#0;class#WalkaCzarodziej#0" />
+                <element signature="method#walkaWojownikSzkielet#0;class#WalkaWojownik#0" />
+                <element signature="method#walkaWojownikGoblin#0;class#WalkaWojownik#0" />
               </folding>
             </state>
           </provider>
@@ -49,20 +37,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Smok.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="517">
               <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Goblin.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Wojownik.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+            <state relative-caret-position="175">
+              <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/WalkaCzarodziej.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
               <folding>
-                <element signature="e#143#144#0" expanded="true" />
-                <element signature="e#187#188#0" expanded="true" />
+                <element signature="method#pyroblastPodpalenie#0;class#WalkaCzarodziej#0" />
+                <element signature="method#walkaCzarodziejGoblin#0;class#WalkaCzarodziej#0" />
+                <element signature="method#walkaCzarodziejSmokBoss#0;class#WalkaCzarodziej#0" />
               </folding>
             </state>
           </provider>
@@ -71,26 +69,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/klasa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="-1325">
               <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/wprowadz.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/GraTurowaMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="464">
+              <caret line="28" column="73" lean-forward="true" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -121,14 +110,16 @@
         <option value="$PROJECT_DIR$/src/com/company/Goblin.java" />
         <option value="$PROJECT_DIR$/src/com/company/KontenerWalka.java" />
         <option value="$PROJECT_DIR$/src/com/company/Smok.java" />
-        <option value="$PROJECT_DIR$/src/com/company/WalkaCzarodziej.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/WalkaCzarodziej.java" />
+        <option value="$PROJECT_DIR$/src/com/company/GraTurowaMain.java" />
+        <option value="$PROJECT_DIR$/src/com/company/WalkaWojownik.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="1553" />
+    <option name="y" value="-20" />
     <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
@@ -167,7 +158,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583515041673" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583522430911" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -226,10 +217,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="1592" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1475" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1727672" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -238,7 +228,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3061889" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22964169" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3664495" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -266,13 +256,6 @@
     <entry file="file://$PROJECT_DIR$/Game.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Wojownik.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
     <entry file="file://$PROJECT_DIR$/out/production/Game/com/company/StartGame.class" />
     <entry file="file://$PROJECT_DIR$/src/com/company/StartGame.java" />
@@ -295,35 +278,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/KontenerWalka.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Smok.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Goblin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="e#143#144#0" expanded="true" />
-            <element signature="e#187#188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/klasa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="200">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -334,21 +292,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Goblin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="230">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding>
+            <element signature="e#143#144#0" expanded="true" />
+            <element signature="e#187#188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/KontenerWalka.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-325">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding>
+            <element signature="e#523#7536#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/klasa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1325">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Smok.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Wojownik.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/GraTurowaMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="28" column="73" lean-forward="true" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/WalkaCzarodziej.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="394" column="4" selection-start-line="394" selection-start-column="4" selection-end-line="394" selection-end-column="4" />
+        <state relative-caret-position="72">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
           <folding>
             <element signature="method#pyroblastPodpalenie#0;class#WalkaCzarodziej#0" />
-            <element signature="method#walkaCzarodziejSzkielet#0;class#WalkaCzarodziej#0" />
             <element signature="method#walkaCzarodziejGoblin#0;class#WalkaCzarodziej#0" />
+            <element signature="method#walkaCzarodziejSmokBoss#0;class#WalkaCzarodziej#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/WalkaWojownik.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-854">
+          <caret line="210" column="27" lean-forward="true" selection-start-line="210" selection-start-column="27" selection-end-line="210" selection-end-column="27" />
+          <folding>
+            <element signature="method#walkaWojownikSzkielet#0;class#WalkaWojownik#0" />
+            <element signature="method#walkaWojownikGoblin#0;class#WalkaWojownik#0" />
           </folding>
         </state>
       </provider>
