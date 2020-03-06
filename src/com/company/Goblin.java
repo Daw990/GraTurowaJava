@@ -8,9 +8,9 @@ public class Goblin extends klasa {
     }
 
     void pierwszeStarcie(){
-        System.out.println("Napotykasz Goblina nie wygląda na silnego ale źle mu z oczu patrzy:");
+        System.out.println("Napotykasz Goblina nie wygląda na silnego ale źle mu z oczu patrzy:/n UWAGA Goblin oddaje krytycznie!");
     }
-    void GoblinDie(){
+    void goblinDie(){
         System.out.println("Goblin nie zyje idziemy dalej!");
     }
 

@@ -72,8 +72,8 @@ public class wprowadz extends klasa {
             }
         }
     }
-    int getWyborPostaci(){
+    public int getWyborPostaci(){
         return wyborPostaci;
     }
-    int getWyborAtaku(){return wyborAtaku;}
+    public int getWyborAtaku(){return wyborAtaku;}
 }
